@@ -16,7 +16,15 @@ module.exports = {
     },
     module: {
         rules: [
-            { test: /\.ts$/, loader: "ts-loader" },
+            {
+                test: /\.ts$/,
+                loader: 'esbuild-loader',
+                options: {
+                    loader: 'ts',
+                    target: 'es2015',
+                    tsconfigRaw: require('./tsconfig.json')
+                }
+            },
             {
                 test: /\.css$/,
                 use: ["style-loader", "css-loader", "postcss-loader"],

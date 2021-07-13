@@ -5,6 +5,7 @@ const CopyPlugin = require("copy-webpack-plugin");
 const path = require('path');
 const ThreeMinifierPlugin = require("@yushijinhun/three-minifier-webpack");
 const threeMinifier = new ThreeMinifierPlugin();
+const { ESBuildMinifyPlugin } = require('esbuild-loader')
 
 
 module.exports = {
@@ -41,7 +42,15 @@ module.exports = {
     },
     module: {
         rules: [
-            { test: /\.ts$/, loader: "ts-loader" },
+            {
+                test: /\.ts$/,
+                loader: 'esbuild-loader',
+                options: {
+                    loader: 'ts',
+                    target: 'es2015',
+                    tsconfigRaw: require('./tsconfig.json')
+                }
+            },
             {
                 test: /\.css$/,
                 use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
@@ -52,5 +61,13 @@ module.exports = {
                 type: "asset/resource",
             }
         ],
-    }
+    },
+    optimization: {
+        minimizer: [
+            new ESBuildMinifyPlugin({
+                target: 'es2017',
+                css: true
+            })
+        ]
+    },
 };
