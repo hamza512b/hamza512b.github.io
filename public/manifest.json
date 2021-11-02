@@ -1,5 +1,5 @@
 {
-    "name": "Hamza Khuswan personal Website",
+    "name": "Hamza, a web developer.",
     "icons": [
         {
             "src": "/logo192.png",
@@ -14,6 +14,5 @@
     ],
     "start_url": ".",
     "display": "standalone",
-    "theme_color": "#81a1cc",
-    "background_color": "#ffffff"
+    "theme_color": "#81a1cc"
 }

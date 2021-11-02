@@ -18,7 +18,7 @@ export class ScreenCanvas {
     private tabIndex = 0;
     constructor(canvas: HTMLCanvasElement) {
         this.canvas = canvas;
-        this.ctx = this.canvas.getContext("2d");
+        this.ctx = this.canvas.getContext("2d") as CanvasRenderingContext2D;
         this.h = this.canvas.height;
         this.w = this.canvas.width;
         this.navHeight = this.h * 0.05;
@@ -32,6 +32,7 @@ export class ScreenCanvas {
         this.startY = this.navHeight + this.h * 0.1;
         this.startX = this.w * 0.2 + this.wordGap;
 
+        
         this.ctx.fillStyle = "#FFF";
         this.ctx.fillRect(0, 0, this.w, this.navHeight);
         let navOfst = 0;
@@ -49,7 +50,7 @@ export class ScreenCanvas {
         this.ctx.fillRect(0, this.navHeight, this.w, this.appHeight);
     }
 
-    
+
     private randomLength() {
         return this.minLength + Math.random() * (this.maxLength - this.minLength);
     }
@@ -80,7 +81,7 @@ export class ScreenCanvas {
             if (this.tabIndex === 0 && Math.random() > 0.6) this.tabIndex++;
             else if (this.tabIndex === 1 && Math.random() > 0.75) this.tabIndex++;
             else if (this.tabIndex > 0) this.tabIndex--;
-          
+
             this.startX = this.w * 0.2 + this.wordGap + this.w * 0.1 * this.tabIndex;
             this.startY += this.rowGap + this.wordHeight * (this.tabIndex === 0 && Math.random() > 0.5 ? 3 : 1);
         } else {

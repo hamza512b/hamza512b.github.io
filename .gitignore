@@ -1,4 +1,6 @@
 node_modules
-.parcel-cache
+.DS_Store
 dist
-yarn-error.log
+dist-ssr
+*.local
+*.log
