@@ -22,8 +22,8 @@ const scene = new Scene();
 
 // Camera
 const camera = new OrthographicCamera((-canvas.clientWidth / 2), (canvas.clientWidth / 2), (canvas.clientHeight / 2), (-canvas.clientHeight / 2), 0, 2000);
-camera.position.set(-0.1, 3, -3.5)
-camera.lookAt(0, 0, 0.15);
+camera.position.set(-1, 3.5, -3.5)
+camera.lookAt(0.03, 0, 0.15);
 camera.zoom = 1000;
 camera.updateProjectionMatrix()
 
@@ -47,7 +47,7 @@ directionalLight.shadow.mapSize.width = 1024;
 directionalLight.shadow.mapSize.height = 1024;
 scene.add(directionalLight);
 
-// Hemi light
+// Hemisphere light
 const hemisphereLight = new HemisphereLight(0xEEEEEE, 0x000000, .1);
 scene.add(hemisphereLight);
 
@@ -69,7 +69,7 @@ texture.flipY = false;
 texture.wrapS = RepeatWrapping;
 texture.repeat.x = - 1;
 
-// Event listenr of mouse postion relative to the center of the canvas multiped by 0.0001
+// Event listener of mouse position relative to the center of the canvas scaled by 0.0001
 let mouseAngle: number = 0;
 window.addEventListener("mousemove", (ev) => {
     const box = canvas.getBoundingClientRect();
@@ -89,7 +89,6 @@ loader.load(
     function (gltf) {
         gltf.scene.traverse(obj => {
             if (obj.isObject3D) {
-                // if (obj.name === "Bottom") laptop = obj;
                 obj.castShadow = true;
 
                 if (obj.name === "Bottom") laptop = obj;
