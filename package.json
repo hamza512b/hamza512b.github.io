@@ -7,7 +7,7 @@
     "build": "next build && next export",
     "start": "next start",
     "lint": "next lint",
-    "run-deploy": "gh-pages -d out"
+    "run-deploy": "gh-pages -d out -t true"
   },
   "dependencies": {
     "@mdx-js/loader": "^2.3.0",

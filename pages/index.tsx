@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Hamza{"'"}s personal website</title>
+        <title>Hamza&apos;s personal website</title>
         <meta name="description" content="Hamza's personal website" />
         <SEO />
       </Head>
