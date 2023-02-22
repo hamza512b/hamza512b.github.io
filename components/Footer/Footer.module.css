@@ -1,0 +1,45 @@
+.footer {
+  padding: 128px 0 64px;
+}
+
+.footer .link {
+  position: relative;
+  display: inline-block;
+}
+
+.footer .link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: var(--blue-600);
+  transition: height 300ms;
+  z-index: -1;
+}
+
+.footer .links {
+  padding-block: 16px;
+  align-items: center;
+}
+
+@media (prefers-reduced-motion: no-preference) and (hover: hover) and (pointer: fine) {
+  .footer .link:hover:after {
+    height: 100%;
+  }
+}
+.footer h3 {
+  font-size: 2rem;
+}
+
+.footer p {
+  margin-block: 16px;
+  max-width: 450px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .footer .link::after {
+    background-color: var(--blue-800);
+  }
+}

@@ -1,0 +1,105 @@
+.dialog {
+  overflow: hidden;
+  background-color: #ffffff;
+  transition-property: all;
+  text-align: left;
+  width: 100%;
+  max-width: 32rem;
+  border-radius: 0.5rem;
+  --ring-color: #d1d5db;
+}
+
+.dialog .content {
+  padding: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  padding-top: 1.25rem;
+  background-color: #ffffff;
+  color: #000;
+  display: flex;
+  align-items: flex-start;
+}
+.dialog .content .icon {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-left: 0;
+  margin-right: 0;
+  background-color: #fee2e2;
+  color: #991b1b;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+}
+.dialog .content .icon svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.dialog .content .text {
+  margin-top: 0;
+  margin-left: 1rem;
+  text-align: left;
+}
+.dialog .content .text .title {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+}
+.dialog .content .text .paragraph {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.dialog .actions {
+  display: flex;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  flex-direction: row-reverse;
+  column-gap: 1rem;
+  background-color: #f2f2f2;
+}
+.dialog .actions .button {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  border-radius: 0.375rem;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dialog .actions .button.primary {
+  background-color: hsla(221, 83%, 42%, 0.8);
+  color: #fff;
+  order: 1;
+}
+
+.dialog .actions .button.secondary {
+  background-color: #f2f4f6;
+  order: 2;
+}
+
+.dialog .actions .button:hover {
+  filter: brightness(90%);
+}
+
+.dialog .actions .button:focus {
+  box-shadow: 0px 0px 0 2px #e5e5e5, 0px 0px 0 4px #2563eb;
+  outline: none;
+}
+
+@media (prefers-color-scheme: light) {
+  .dialog {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+}

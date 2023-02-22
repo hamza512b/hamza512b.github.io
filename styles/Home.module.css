@@ -1,0 +1,221 @@
+.main {
+  height: 100%;
+}
+
+.intro {
+  display: grid;
+  grid-template-columns:
+    1fr minmax(400px, 600px) minmax(100px, 200px) minmax(300px, 400px)
+    1fr;
+  grid-template-rows: 1fr;
+
+  width: 100%;
+  margin: 0 auto;
+  isolation: isolate;
+  --max-height: 800px;
+}
+
+.intro .text {
+  grid-column: 2 / 3;
+  margin-bottom: 32px;
+}
+.intro .text .nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 32px 0 16px;
+}
+
+.intro .text .link {
+  font-size: 1rem;
+}
+
+.intro .text .link.primary {
+  font-weight: 800;
+  color: var(--blue-800);
+}
+
+.intro .text h1 {
+  font-size: 2.25rem;
+  line-height: 1.5;
+  font-weight: 700;
+  margin-block: 24px;
+}
+.intro .text p {
+  margin-bottom: 24px;
+}
+.intro .text .blue {
+  color: var(--blue-800);
+}
+.intro .clipping {
+  position: relative;
+  grid-column: 3 / 5;
+  grid-row: 1;
+  width: 100%;
+  height: 100%;
+  max-height: var(--max-height);
+  z-index: 1;
+  color: white;
+  transform: translate(-1px);
+}
+.intro .clipping svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.intro .gradient {
+  height: 100%;
+  max-height: var(--max-height);
+  background: linear-gradient(var(--blue-700), var(--green-700));
+  grid-column: 3 / 6;
+  grid-row: 1;
+  display: flex;
+  align-items: center;
+}
+.intro .canvas {
+  grid-column: 3 /5;
+  grid-row: 1;
+  width: 100%;
+  height: auto;
+  max-height: var(--max-height);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+.intro .canvas > * {
+  height: 400px;
+  width: 400px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.projects {
+  margin-top: 64px;
+}
+.projects > * + * {
+  margin-top: 16px;
+}
+.projects .heading {
+  font-size: 2rem;
+}
+
+.projects .text {
+  max-width: 400px;
+}
+
+.projects .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+}
+.projects .grid .project > * + * {
+  margin-top: 16px;
+}
+.projects .grid .project {
+  flex: 1;
+}
+.projects .grid h3 {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+.projects .grid p {
+  max-width: 320px;
+}
+.projects .grid .button {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 8px;
+  background-color: var(--blue-800);
+  transition: background 500ms;
+  color: white;
+  gap: 4px;
+  border-radius: 4px;
+}
+.projects .grid .button:hover {
+  background-color: var(--blue-700);
+}
+
+.projects .grid .image {
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: hidden;
+}
+.projects .grid .image img {
+  display: block;
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s;
+}
+
+@media (prefers-reduced-motion: no-preference) and (hover: hover) and (pointer: fine) {
+  .projects .grid .image:hover img {
+    transform: scale(1.02);
+  }
+}
+
+@media (max-width: 1250px) {
+  .intro .text,
+  .container {
+    padding-inline: 16px;
+  }
+
+  .projects .grid {
+    gap: 50px;
+  }
+}
+@media (max-width: 800px) {
+  .intro {
+    grid-template-rows: 400px 1fr;
+    grid-template-columns: 1fr;
+  }
+  .intro .canvas {
+    grid-row: 1;
+    grid-column: 1;
+  }
+  .intro .canvas > * {
+    width: 300px;
+    height: 300px;
+  }
+  .intro .gradient {
+    grid-row: 1;
+    grid-column: 1;
+  }
+  .intro.clipping {
+    display: none;
+  }
+  .intro .text {
+    grid-row: 2;
+    grid-column: 1;
+  }
+  .projects .grid {
+    gap: 62px;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .intro .text .link.primary {
+    color: var(--blue-600);
+  }
+  .intro .text .blue {
+    color: var(--blue-600);
+  }
+  .intro .gradient {
+    opacity: 0.4;
+  }
+  .intro .clipping {
+    color: var(--gray-900);
+  }
+  .projects .grid .button {
+    background-color: var(--blue-650);
+  }
+}

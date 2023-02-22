@@ -1,0 +1,210 @@
+.datePicker {
+  width: 100%;
+  max-width: 312px;
+}
+
+.datePickerButton {
+  display: inline-flex;
+  width: 100%;
+  overflow: hidden;
+  background-color: #fefefe;
+  padding: 0.75rem 0.625rem;
+  border-radius: 5px;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+}
+
+.datePickerButton:focus-within {
+  box-shadow: 0px 0px 0 2px #2563eb;
+}
+
+.datePickerButton button {
+  border: none;
+  background-color: transparent;
+}
+
+.datePickerButton input:focus,
+.datePickerButton button:focus {
+  outline: none;
+}
+
+.datePickerButton button {
+  color: #999;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.datePickerButton button:focus,
+.datePickerButton button:hover {
+  cursor: pointer;
+  color: #333;
+}
+
+.datePickerButton input::placeholder {
+  color: #888;
+}
+
+.datePickerButton input {
+  background-color: transparent;
+  width: 100%;
+  border: none;
+  font-size: 1rem;
+  line-height: normal;
+}
+
+.datePickerButton input::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+.datePickerButton input[type="date"]::-webkit-input-placeholder {
+  visibility: hidden !important;
+}
+
+.datePickerDialog {
+  width: 100%;
+  background-color: #fefefe;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 0.75rem;
+}
+
+.datePickerButton {
+  display: flex;
+  margin: 1rem 0;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+}
+
+.datePickerDialogHeader {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.datePickerDialogHeader span {
+  font-weight: 700;
+  margin: 0 auto !important;
+  font-size: 1rem !important;
+  line-height: 1 !important;
+  color: black;
+}
+
+.datePickerDialogHeader button {
+  border: none;
+  background-color: transparent;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 5px;
+  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.datePickerDialogHeader button:hover {
+  background-color: aliceblue;
+}
+
+.datePickerDialogHeader button:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 1);
+}
+
+.datePickerDialogGrid {
+  width: 100%;
+}
+
+.datePickerDialogGrid {
+  border-collapse: collapse;
+}
+
+.datePickerDialogGrid tr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.datePickerDialogGrid th {
+  color: #000;
+}
+.datePickerDialogGrid td {
+  display: block;
+  text-align: center;
+  line-height: 2rem;
+  height: 2rem;
+  width: 2rem;
+  font-weight: bold;
+  place-self: center;
+  cursor: default;
+  padding: 0;
+}
+.datePickerDialogGrid td button {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+}
+.datePickerDialogGrid button.active {
+  background-color: hsla(221, 83%, 43%, 0.8);
+  color: #ffffff;
+  border-radius: 50%;
+}
+.datePickerDialogGrid button:hover {
+  background-color: hsla(221, 83%, 53%, 0.8);
+  color: #ffffff;
+  border-radius: 50%;
+}
+.datePickerDialogGrid button:disabled {
+  background-color: transparent;
+  color: #888;
+  cursor: default;
+}
+
+.datePickerDialogGrid button:focus {
+  box-shadow: 0 0 0 2px #000;
+}
+
+.datePickerDialogButtons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.75rem;
+}
+
+.datePickerDialogButtons .primary {
+  background-color: hsla(221, 83%, 42%, 0.8);
+  border: none;
+  color: #fefefe;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.datePickerDialogButtons .primary:hover {
+  filter: brightness(90%);
+}
+
+.datePickerDialogButtons .primary:focus {
+  box-shadow: 0px 0px 0 2px #e5e5e5, 0px 0px 0 4px #2563eb;
+  outline: none;
+}
+
+.datePickerDialogButtons .secondary {
+  background-color: #f2f4f6;
+  border: none;
+  color: #333333;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.datePickerDialogButtons .secondary:hover {
+  filter: brightness(90%);
+}
+
+.datePickerDialogButtons .secondary:focus {
+  box-shadow: 0px 0px 0 2px #e5e5e5, 0px 0px 0 4px #2563eb;
+  outline: none;
+}

@@ -1,0 +1,57 @@
+import Layout from "../components/MDXLayout";
+import ComponentsPreview from "../components/ComponentsPreview";
+
+export const meta = {
+  title: "Absence tracking system",
+  description:
+    "System which which facilitate for schools to deal with student absence.",
+};
+
+# Absence tracking system
+
+Absence tracking system for schools, which facilitate for schools to deal with student absence. It is designed and developed with a vision of creating a better experience for everyone. It allows the student to view their lecture time and report their absence, it allows teachers to report students' absence and it allows administrators to manage the organization.
+
+I have planned, designed and developed all this system by myself. It has been tough project and I have spent countless hours on it.
+
+## Core functionality
+
+- Allow you as administrator to manage users to your organization, add groups and events or repeating events.
+- Allow you as student/guardian to view your events and absence + report your absence.
+- Allow you as teacher to report the absence in your classroom.
+
+![Administrator interface](/images/admin)
+
+## Tech stack
+
+- React, Next.js as framework
+- TailwindCSS, for styling
+- tRPC, for API endpoints
+- Prisma, as ORM
+- MySQL as database.
+- Stripe as payment processor
+
+## Accessible UI
+
+One of the key features of the absence tracking system is its accessible user interface. The system has been designed with accessibility in mind, making it easy for users of all abilities to use the system. The user interface includes features such as keyboard navigation, and supports screen reader, which help to ensure that the system can be used by as many people as possible.
+
+<ComponentsPreview />
+
+## Scheduling
+
+The absence tracking system includes a robust scheduling feature that allows students and teachers to view their schedule and manage their attendance. The scheduling feature includes the ability to view upcoming events and absence, and to report absences as necessary. The system also includes the ability to create repeating events, making it easy for administrator to schedule regular classes and for students to keep track of their schedules.
+
+![Schedule show in the student interface](/images/absence)
+
+## The project is live
+
+The absence tracking system is currently live and can be found at this [address](https://diskret.linjar.se). The website can be used in both English or Swedish. However, as for now, no organization is using the software, as it is still in its initial stage.
+
+I plan to continue developing and refining the system, with the hope of making it a valuable tool for schools and educational institutions. I am committed to making the absence tracking system as useful and user-friendly as possible.
+
+In the future, I plan to market the system to schools and educational institutions, and to build partnerships with organizations that share my vision of creating a better educational experience for everyone. I am excited to see where this project will take me, and I look forward to continuing to improve and refine the project.
+
+## What I have learned
+
+Developing the absence tracking system was a challenging project that required a lot of hard work and dedication. Through the course of the project, I learned a great deal about web development, including the importance of good project planning. Managing a project of this scale. It required me to stay organized and focused.
+
+export default ({ children }) => <Layout meta={meta}>{children}</Layout>;

@@ -1,0 +1,68 @@
+:root {
+  --blue-800: hsla(233, 40%, 36%, 1);
+  --blue-700: hsla(233, 50%, 53%, 1);
+  --blue-650: hsla(233, 70%, 60%, 1);
+  --blue-600: hsla(233, 70%, 63%, 1);
+  --blue-300: hsla(233, 70%, 70%, 1);
+  --green-700: hsla(180, 50%, 53%, 1);
+  --green-800: hsla(180, 40%, 36%, 1);
+  --green-600: hsla(180, 70%, 63%, 1);
+  --gray-hue: 180;
+  --gray-900: hsla(var(--gray-hue), 93%, 3%, 1);
+  --gray-800: hsla(var(--gray-hue), 93%, 7%, 1);
+  --gray-700: hsla(var(--gray-hue), 92%, 8%, 1);
+  --gray-600: hsla(var(--gray-hue), 34%, 20%, 1);
+  --gray-500: hsla(var(--gray-hue), 9%, 39%, 1);
+  --gray-400: hsla(var(--gray-hue), 9%, 67%, 1);
+  --gray-300: hsla(var(--gray-hue), 9%, 79%, 1);
+  --gray-200: hsla(var(--gray-hue), 9%, 87%, 1);
+  --gray-100: hsla(var(--gray-hue), 9%, 93%, 1);
+  --gray-50: hsla(var(--gray-hue), 9%, 97%, 1);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+}
+html,
+body,
+#__next {
+  height: 100%;
+}
+
+body {
+  font-family: var(--manrope-font), Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: var(--gray-900);
+    color: white;
+  }
+}

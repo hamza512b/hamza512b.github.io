@@ -46,7 +46,7 @@ export class ScreenCanvas {
     }
 
     private clear() {
-        this.ctx.fillStyle = "#1C1C1C";
+        this.ctx.fillStyle = "#000";
         this.ctx.fillRect(0, this.navHeight, this.w, this.appHeight);
     }
 
