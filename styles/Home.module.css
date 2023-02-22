@@ -68,7 +68,19 @@
 .intro .gradient {
   height: 100%;
   max-height: var(--max-height);
-  background: linear-gradient(var(--blue-700), var(--green-700));
+  background-image: linear-gradient(
+    45deg,
+    hsl(233deg 50% 53%) 0%,
+    hsl(214deg 76% 46%) 22%,
+    hsl(206deg 100% 42%) 29%,
+    hsl(203deg 100% 42%) 34%,
+    hsl(200deg 100% 42%) 39%,
+    hsl(196deg 100% 42%) 44%,
+    hsl(192deg 100% 41%) 50%,
+    hsl(188deg 100% 40%) 58%,
+    hsl(184deg 81% 43%) 68%,
+    hsl(180deg 50% 53%) 100%
+  );
   grid-column: 3 / 6;
   grid-row: 1;
   display: flex;
@@ -210,7 +222,19 @@
     color: var(--blue-600);
   }
   .intro .gradient {
-    opacity: 0.4;
+    background-image: linear-gradient(
+      45deg,
+      hsl(233deg 40% 36%) 0%,
+      hsl(217deg 58% 34%) 22%,
+      hsl(205deg 98% 28%) 29%,
+      hsl(202deg 100% 28%) 34%,
+      hsl(198deg 100% 28%) 39%,
+      hsl(195deg 100% 28%) 44%,
+      hsl(191deg 100% 27%) 50%,
+      hsl(188deg 100% 26%) 58%,
+      hsl(185deg 60% 32%) 68%,
+      hsl(180deg 40% 36%) 100%
+    );
   }
   .intro .clipping {
     color: var(--gray-900);
