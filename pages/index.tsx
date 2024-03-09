@@ -85,6 +85,27 @@ export default function Home() {
           </p>
           <div className={styles.grid}>
             <div className={styles.project}>
+              <Link href={"https://l4r.app"} className={styles.image}>
+                <Image
+                  src="/images/collab"
+                  alt="Collaborative text editor preview"
+                />
+              </Link>
+              <h3>Collaborative text editor</h3>
+              <p>
+                A collaborative text editor that allows multiple users to write
+                together.
+              </p>
+              <Link
+                href={"https://l4r.app"}
+                target="_blank"
+                className={styles.button}
+              >
+                <span>View website</span>
+                <LinkIcon size={14} color="#fff" weight="duotone" />
+              </Link>
+            </div>
+            <div className={styles.project}>
               <Link href={"/absence"} className={styles.image}>
                 <Image
                   src="/images/absence"
