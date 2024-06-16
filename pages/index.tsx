@@ -42,19 +42,19 @@ export default function Home() {
             <Nav />
             <h1 id="about">
               Hi! <br />I am Hamza! <br />I am a{" "}
-              <span className={styles.blue}>web developer</span>
+              <span className={styles.blue}>software developer</span>
             </h1>
             <p>
               My name is Hamza, self-taught developer. I have been mainly
-              focused in web for while since this what I started{" "}
-              {count ? count : "many"} years ago. But since lately I am doing
-              things all over the place.
+              focused on web development for while since this what I started
+              with {count ? count : "many"} years ago. But since lately I am
+              doing things all over the place.
             </p>
             <p>
-              Since than I have created numerous websites and continued
-              improving my skill set in the field. I am now working full time as
-              a web developer. In addition to I do a lot of side-projects, I
-              occasionally do some freelance work.
+              I have created numerous websites and continued improving my skill
+              set in the field. I am now working full time as a web developer.
+              In addition to that I do a lot of side-projects, I occasionally do
+              some freelance work.
             </p>
 
             <p>
