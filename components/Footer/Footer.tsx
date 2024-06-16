@@ -23,15 +23,6 @@ export default function Footer(props: { className?: string }) {
         >
           Github
         </Link>
-        ,{" "}
-        <Link
-          href={"https://www.upwork.com/freelancers/~01924c1277154fbaf9"}
-          referrerPolicy="no-referrer"
-          target={"_blank"}
-          className={styles.link}
-        >
-          Upwork
-        </Link>
       </div>
     </footer>
   );

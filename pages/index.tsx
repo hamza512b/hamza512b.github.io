@@ -1,15 +1,17 @@
-import Head from "next/head";
 import styles from "@/styles/Home.module.css";
+import Head from "next/head";
 import { Link as LinkIcon } from "phosphor-react";
 
-import { Manrope } from "@next/font/google";
-import clsx from "clsx";
-import Link from "next/link";
-import { ThreeCanvas } from "@/components/ThreeCanvas";
-import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Image from "@/components/Image";
+import Nav from "@/components/Nav";
 import { SEO } from "@/components/SEO";
+import { ThreeCanvas } from "@/components/ThreeCanvas";
+import { Manrope } from "@next/font/google";
+import clsx from "clsx";
+import { DateTime } from "luxon";
+import Link from "next/link";
+import { useLayoutEffect, useState } from "react";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -18,6 +20,14 @@ const manrope = Manrope({
 });
 
 export default function Home() {
+  const [count, setCount] = useState<number | null>(null);
+  useLayoutEffect(() => {
+    const count = -Math.round(
+      DateTime.fromFormat("2016", "yyyy").diffNow("years").years
+    );
+    setCount(count);
+  }, []);
+
   return (
     <>
       <Head>
@@ -35,30 +45,30 @@ export default function Home() {
               <span className={styles.blue}>web developer</span>
             </h1>
             <p>
-              My name is Hamza, self-taught web developer and 3d graphics
-              enthusiast. I started web development when I was 14 years. I
-              wanted to create Youtube clone, because my youtube channel has
-              been terminated. I started learning web development. Years later,
-              I did not create Youtube clone, but I continued doing web
-              development. I liked the world of the web and programming.
-            </p>
-            <p>
-              The web is place where you can share what you invasion with anyone
-              in the world, despite the device and the place they are in.
-              Programming is logical, you receive what you predict. This what I
-              liked.
+              My name is Hamza, self-taught developer. I have been mainly
+              focused in web for while since this what I started{" "}
+              {count ? count : "many"} years ago. But since lately I am doing
+              things all over the place.
             </p>
             <p>
               Since than I have created numerous websites and continued
-              improving my skill set in the field. I am now working on more
-              side-projects, I occasionally do some freelance work. I am also
-              seeking full-time work.
+              improving my skill set in the field. I am now working full time as
+              a web developer. In addition to I do a lot of side-projects, I
+              occasionally do some freelance work.
             </p>
+
             <p>
-              I dream in the future to contribute to the web and work on a
-              browser like chromium. I want for the web to have better
-              experience than native apps on desktops and mobile. I hope that
-              will happen one day.
+              The web is place where you can share what you invasion with anyone
+              in the world, despite the device and the place they are in. I
+              dream in the future to contribute to the web and work on a browser
+              like chromium. I want for the web to have better experience than
+              native apps on desktops and mobile. I hope that will happen one
+              day.
+            </p>
+
+            <p>
+              Lastly I want to add that the illustration you see is made by me
+              in my quest for digging the rabbit hole of 3D graphics.
             </p>
           </div>
           <div className={styles.gradient}></div>
@@ -137,28 +147,6 @@ export default function Home() {
               </p>
               <Link
                 href={"https://hamza.se/minskin"}
-                target="_blank"
-                className={styles.button}
-              >
-                <span>View website</span>
-                <LinkIcon size={14} color="#fff" weight="duotone" />
-              </Link>
-            </div>
-            <div className={styles.project}>
-              <Link
-                href={"https://hamza.se/earth"}
-                target="_blank"
-                className={styles.image}
-              >
-                <Image
-                  src="/images/earth"
-                  alt="Glowing blue earth in the dark space."
-                />
-              </Link>
-              <h3>Earth website</h3>
-              <p>Website of our rotating globe with sound of earth.</p>
-              <Link
-                href={"https://hamza.se/earth"}
                 target="_blank"
                 className={styles.button}
               >
