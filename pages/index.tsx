@@ -20,14 +20,6 @@ const manrope = Manrope({
 });
 
 export default function Home() {
-  const [count, setCount] = useState<number | null>(null);
-  useLayoutEffect(() => {
-    const count = -Math.round(
-      DateTime.fromFormat("2016", "yyyy").diffNow("years").years
-    );
-    setCount(count);
-  }, []);
-
   return (
     <>
       <Head>
@@ -42,14 +34,15 @@ export default function Home() {
             <Nav />
             <h1 id="about">
               Hi! <br />I am Hamza! <br />I am a{" "}
-              <span className={styles.blue}>software developer</span>
+              <span className={styles.blue}>software developer!</span>
             </h1>
+
             <p>
-              My name is Hamza, self-taught developer. I have been mainly
-              focused on web development for while since this what I started
-              with {count ? count : "many"} years ago. But since lately I am
-              doing things all over the place.
+              I am a software developer from Sweden. I have been coding since I
+              was 14 years old. I started with javascript and moved on to
+              learning other languages and frameworks.
             </p>
+
             <p>
               I have created numerous websites and continued improving my skill
               set in the field. I am now working full time as a web developer.
@@ -58,12 +51,12 @@ export default function Home() {
             </p>
 
             <p>
-              The web is place where you can share what you invasion with anyone
-              in the world, despite the device and the place they are in. I
-              dream in the future to help improve the web and work on a browser
-              like chromium. I want for the web to have better experience than
-              native apps on desktops and mobile. I hope that will happen one
-              day.
+              I like the web because it is place where you can share what you
+              invasion with anyone in the world, despite the device and the
+              place they are in. I dream in the future to help improve the web
+              and work on a browser like chromium. I want for the web to have
+              better experience than native apps on desktops and mobile. I hope
+              that will happen one day.
             </p>
 
             <p>
