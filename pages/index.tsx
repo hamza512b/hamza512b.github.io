@@ -52,7 +52,7 @@ export default function Home() {
 
             <p>
               I like the web because it is place where you can share what you
-              invasion with anyone in the world, despite the device and the
+              envision with anyone in the world, despite the device and the
               place they are in. I dream in the future to help improve the web
               and work on a browser like chromium. I want for the web to have
               better experience than native apps on desktops and mobile. I hope
