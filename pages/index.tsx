@@ -38,7 +38,7 @@ export default function Home() {
             </h1>
 
             <p>
-              I am a software developer from Sweden. I have been coding since I
+              I am a software developer based in Sweden. I have been coding since I
               was 14 years old. I started with javascript and moved on to
               learning other languages and frameworks.
             </p>
