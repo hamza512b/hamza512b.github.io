@@ -9,9 +9,7 @@ import { SEO } from "@/components/SEO";
 import { ThreeCanvas } from "@/components/ThreeCanvas";
 import { Manrope } from "@next/font/google";
 import clsx from "clsx";
-import { DateTime } from "luxon";
 import Link from "next/link";
-import { useLayoutEffect, useState } from "react";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -32,36 +30,16 @@ export default function Home() {
         <div className={styles.intro}>
           <div className={styles.text}>
             <Nav />
-            <h1 id="about">
-              Hi! <br />I am Hamza! <br />I am a{" "}
-              <span className={styles.blue}>software developer!</span>
-            </h1>
 
-            <p>
-              I am a software developer based in Sweden. I have been coding since I
-              was 14 years old. I started with javascript and moved on to
-              learning other languages and frameworks.
-            </p>
-
-            <p>
-              I have created numerous websites and continued improving my skill
-              set in the field. I am now working full time as a web developer.
-              In addition to that I do a lot of side-projects, I occasionally do
-              some freelance work.
-            </p>
-
-            <p>
-              I like the web because it is place where you can share what you
-              envision with anyone in the world, despite the device and the
-              place they are in. I dream in the future to help improve the web
-              and work on a browser like chromium. I want for the web to have
-              better experience than native apps on desktops and mobile. I hope
-              that will happen one day.
-            </p>
-
-            <p>
-              Lastly I want to add that the illustration you see is made by me
-              in my quest for digging the rabbit hole of 3D graphics.
+            <p id="about" className={styles.introText}>
+              I am Hamza, a{" "}
+              <span className={styles.blue}>software developer</span> based in
+              Sweden. I have been coding since I was 14. Coding is the most I
+              know!
+              <br /> I have created numerous projects and I always continue to
+              improve my skills set in the field. I am now working full time as
+              a web developer. In addition to that I occasionally do some
+              freelance work.
             </p>
           </div>
           <div className={styles.gradient}></div>
@@ -80,7 +58,7 @@ export default function Home() {
 
         <div className={clsx(styles.projects, styles.container)}>
           <h2 className={styles.heading} id="projects">
-            What I have been working on
+            What I work on
           </h2>
           <p className={styles.text}>
             I am always working on some project in my free time. Here are some
@@ -148,8 +126,8 @@ export default function Home() {
               </Link>
             </div>
           </div>
+          <Footer className={styles.container} />
         </div>
-        <Footer className={styles.container} />
       </main>
     </>
   );

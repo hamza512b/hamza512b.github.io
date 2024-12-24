@@ -10,8 +10,8 @@ export default function Footer(props: { className?: string }) {
           Feel free to connect if you have questions, looking for a developer or
           just want to talk.
         </p>
-        <Link href={"mailto:hamzakhuswan@outlook.com"} className={styles.link}>
-          hamzakhuswan@outlook.com
+        <Link href={"mailto:hi@hamza.se"} className={styles.link}>
+          hi@hamza.se
         </Link>
       </div>
       <div className={styles.links}>
