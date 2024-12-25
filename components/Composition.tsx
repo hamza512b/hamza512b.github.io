@@ -1,8 +1,10 @@
+import { Laptop } from "@/components/Laptop";
 import { useFrame } from "@react-three/fiber";
 import React, { useRef } from "react";
-import { Laptop } from "@/components/Laptop";
-import { DirectionalLight, OrthographicCamera, ShadowMaterial } from "three";
-import { Plane } from "@react-three/drei";
+import {
+  DirectionalLight,
+  OrthographicCamera
+} from "three";
 
 export function Composition({
   canvasRef,
@@ -45,6 +47,14 @@ export function Composition({
       />
       <directionalLight color={0xffffff} ref={lightRef} />
       <Laptop canvasRef={canvasRef} />
+      <pointLight
+        position={[5, 5, -3]}
+        args={[0xffffff, 1.5, 100]}
+        // args={[10, 10]}
+        // rotation={[-Math.PI / 2, 0, 0]}
+        // receiveShadow
+        // material={new ShadowMaterial()}
+      />
     </>
   );
 }

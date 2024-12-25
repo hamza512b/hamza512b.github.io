@@ -16,8 +16,9 @@ export class WavyBlob {
   c: CanvasRenderingContext2D | null;
   height: number;
   width: number;
+  color: string;
 
-  constructor(c: CanvasRenderingContext2D) {
+  constructor(c: CanvasRenderingContext2D, color = "#010f0f") {
     this.c = c;
     const bumpRadius = 100;
     const halfBumpRadius = bumpRadius / 2;
@@ -30,6 +31,7 @@ export class WavyBlob {
 
     this.height = c.canvas.height;
     this.width = c.canvas.width;
+    this.color = color;
   }
   bezierSkin(bez: number[], closed = true) {
     if (!this.c) {
@@ -94,7 +96,7 @@ export class WavyBlob {
     this.c.rotate((Math.PI * 3) / 2);
     this.c.translate(-rad, -rad);
     this.c.scale(SCALE, SCALE);
-    this.c.fillStyle = "#010f0f";
+    this.c.fillStyle = this.color;
     this.c.beginPath();
     this.c.moveTo(0, 0);
     this.bezierSkin(this.anchors, false);

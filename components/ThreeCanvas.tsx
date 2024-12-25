@@ -12,6 +12,9 @@ export function ThreeCanvas() {
         shadows={{ type: PCFSoftShadowMap, enabled: true }}
         dpr={[1, 2]}
         ref={canvasRef}
+        style={{
+          background: "transparent",
+        }}
       >
         <Composition canvasRef={canvasRef} />
       </Canvas>

@@ -61,7 +61,7 @@
   color: white;
   transform: translate(-1px);
 }
-.intro .clipping canvas {
+.intro .clipping canvas, .intro .clipping img {
   position: absolute;
   top: 0;
   left: 0;
