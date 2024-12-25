@@ -10,6 +10,7 @@ import { ThreeCanvas } from "@/components/ThreeCanvas";
 import { Manrope } from "@next/font/google";
 import clsx from "clsx";
 import Link from "next/link";
+import WaveAnimation from "@/components/WaveAnimation";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -44,12 +45,7 @@ export default function Home() {
           </div>
           <div className={styles.gradient}></div>
           <div className={styles.clipping}>
-            <svg preserveAspectRatio="none" viewBox="0 0 600 800">
-              <path
-                d="M109 0S86 45 86 74c0 28 18 58 19 100s-27 47-27 99c0 53 17 58 17 94 0 35-20 60-20 86s22 58 21 87c-1 30-20 91-3 109s25 28 62 42c36 14 41 42 58 47 17 4 110 25 142 35 31 10 158 26 184 27h61H0V0h109Z"
-                fill="currentColor"
-              />
-            </svg>
+            <WaveAnimation />
           </div>
           <div className={styles.canvas}>
             <ThreeCanvas />

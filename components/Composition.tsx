@@ -45,12 +45,6 @@ export function Composition({
       />
       <directionalLight color={0xffffff} ref={lightRef} />
       <Laptop canvasRef={canvasRef} />
-      <Plane
-        args={[10, 10]}
-        rotation={[-Math.PI / 2, 0, 0]}
-        receiveShadow
-        material={new ShadowMaterial()}
-      />
     </>
   );
 }

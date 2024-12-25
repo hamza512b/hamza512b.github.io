@@ -61,7 +61,7 @@
   color: white;
   transform: translate(-1px);
 }
-.intro .clipping svg {
+.intro .clipping canvas {
   position: absolute;
   top: 0;
   left: 0;
