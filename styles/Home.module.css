@@ -61,7 +61,8 @@
   color: white;
   transform: translate(-1px);
 }
-.intro .clipping canvas, .intro .clipping img {
+.intro .clipping canvas,
+.intro .clipping img {
   position: absolute;
   top: 0;
   left: 0;
@@ -206,6 +207,14 @@
     width: 300px;
     height: 300px;
   }
+  .intro .text p.introText br {
+    display: none;
+  }
+  .intro .text p.introText {
+    font-size: 2rem;
+    line-height: 1.25;
+  }
+
   .intro .gradient {
     grid-row: 1;
     grid-column: 1;
