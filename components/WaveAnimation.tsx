@@ -51,7 +51,6 @@ const WaveAnimation = () => {
 
   useEffect(() => {
     const queryList = window.matchMedia!("(min-width: 800px)");
-    console.log(queryList);
     const updateMatch = () => {
       setIsVisible(queryList.matches);
     };
@@ -64,7 +63,6 @@ const WaveAnimation = () => {
   }, []);
   useEffect(() => {
     const queryList = window.matchMedia!("(prefers-color-scheme: light)");
-    console.log(queryList);
     const updateMatch = () => {
       setIsLight(queryList.matches);
     };

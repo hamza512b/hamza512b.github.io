@@ -11,6 +11,7 @@ import { Manrope } from "@next/font/google";
 import clsx from "clsx";
 import Link from "next/link";
 import WaveAnimation from "@/components/WaveAnimation";
+import NoSSR from "@/components/NoSSR";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -44,12 +45,14 @@ export default function Home() {
             </p>
           </div>
           <div className={styles.gradient}></div>
-          <div className={styles.clipping}>
-            <WaveAnimation />
-          </div>
-          <div className={styles.canvas}>
-            <ThreeCanvas />
-          </div>
+          <NoSSR>
+            <div className={styles.clipping}>
+              <WaveAnimation />
+            </div>
+            <div className={styles.canvas}>
+              <ThreeCanvas />
+            </div>
+          </NoSSR>
         </div>
 
         <div className={clsx(styles.projects, styles.container)}>
